@@ -222,6 +222,9 @@ class Core
 
         $formatter = new \NumberFormatter(app()->getLocale(), \NumberFormatter::CURRENCY);
 
+        $customCurrencySymbol = config('app.custom_currency_symbol');
+        $formatter->setSymbol(\NumberFormatter::CURRENCY_SYMBOL, $customCurrencySymbol);
+
         return $formatter->formatCurrency($price, config('app.currency'));
     }
 

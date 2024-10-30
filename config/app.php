@@ -155,6 +155,16 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Custom Currency Symbol
+    |--------------------------------------------------------------------------
+    |
+    | Here you may specify your custom currency symbol should you not want to use the default one return by PHP's NumberFormatter.
+    |
+     */
+    'custom_currency_symbol' => env('APP_CUSTOM_CURRENCY_SYMBOL', null),
+
+    /*
+    |--------------------------------------------------------------------------
     | Encryption Key
     |--------------------------------------------------------------------------
     |
