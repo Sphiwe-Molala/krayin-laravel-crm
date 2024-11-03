@@ -220,7 +220,7 @@ class Core
             $price = 0;
         }
 
-        $formatter = new \NumberFormatter(app()->getLocale(), \NumberFormatter::CURRENCY);
+        $formatter = new \NumberFormatter(config('app.locale2') ?? app()->getLocale(), \NumberFormatter::CURRENCY);
 
         $customCurrencySymbol = config('app.custom_currency_symbol');
         $formatter->setSymbol(\NumberFormatter::CURRENCY_SYMBOL, $customCurrencySymbol);
